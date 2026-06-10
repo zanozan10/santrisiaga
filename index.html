@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SantriSiaga | Deteksi Bencana & Doa</title>
+    <!-- Bootstrap 5 (UI cepat rapi) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-mosque me-2"></i>
+                Santri<span class="text-highlight">Siaga</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home"><i class="fas fa-home me-1"></i>Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#edukasi"><i class="fas fa-book-quran me-1"></i>Edukasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#panduan"><i class="fas fa-hand-peace me-1"></i>Panduan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang"><i class="fas fa-users me-1"></i>Tentang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-5">
+        
+        <!-- Section HOME / Dashboard -->
+        <section id="home" class="mt-4">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold"> <i class="fas fa-satellite-dish text-primary"></i> Santri<span class="text-highlight">Siaga</span></h1>
+                <p class="lead">Deteksi Bencana Real-time | Doa & Dzikir Otomatis | Berlandaskan Al-Qur'an</p>
+                <p class="badge bg-success"> <i class="fas fa-shield-alt"></i> Santri High-Tech | Techno-Pedagogy</p>
+            </div>
+
+            <!-- Dashboard Grid: 2 Kolom (Cuaca + Gempa) -->
+            <div class="row g-4">
+                <!-- Card Cuaca -->
+                <div class="col-md-6">
+                    <div class="card dashboard-card h-100">
+                        <div class="card-header bg-gradient-primary text-white">
+                            <i class="fas fa-cloud-sun-rain me-2"></i> Cuaca Real-time
+                            <span id="weatherLocation" class="badge bg-light text-dark float-end mt-1"></span>
+                        </div>
+                        <div class="card-body text-center" id="weatherContent">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-2">Memuat data cuaca...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Gempa -->
+                <div class="col-md-6">
+                    <div class="card dashboard-card h-100">
+                        <div class="card-header bg-gradient-danger text-white">
+                            <i class="fas fa-waveform me-2"></i> Gempa Bumi Terkini (BMKG)
+                        </div>
+                        <div class="card-body text-center" id="earthquakeContent">
+                            <div class="spinner-border text-danger" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-2">Memuat data gempa...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section EDUKASI (Wajib: Ayat + Hadits + Artikel) -->
+        <section id="edukasi" class="mt-5 pt-4">
+            <h2 class="section-title"><i class="fas fa-book-quran me-2"></i> Edukasi & Kajian Ilmiah</h2>
+            <div class="row g-4">
+                <!-- Ayat Al-Qur'an -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="arabic-text text-end fs-2">وَظَهَرَ ٱلْفَسَادُ فِى ٱلْبَرِّ وَٱلْبَحْرِ بِمَا كَسَبَتْ أَيْدِى ٱلنَّاسِ</div>
+                            <p class="mt-3 fst-italic">"Telah tampak kerusakan di darat dan di laut disebabkan karena perbuatan tangan manusia..."</p>
+                            <hr>
+                            <p><strong>QS. Ar-Rum (30) : 41</strong> <br> <small>Sains: Ayat ini menjadi landasan ekologi modern. Bencana alam seperti banjir, tanah longsor, dan badai seringkali diperparah oleh kerusakan lingkungan akibat ulah manusia.</small></p>
+                            <button class="btn btn-sm btn-outline-primary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#tafsirAyat"> <i class="fas fa-microphone-alt"></i> Baca Tafsir Ringkas</button>
+                            <div class="collapse mt-3" id="tafsirAyat">
+                                <div class="card card-body bg-light">Imam Ibnu Katsir menjelaskan bahwa kerusakan yang dimaksud adalah berkurangnya berkah, gagal panen, dan munculnya berbagai wabah serta bencana sebagai akibat kemaksiatan.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hadits Doa Angin Kencang -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="arabic-text text-end fs-5">اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا وَخَيْرَ مَا فِيهَا وَخَيْرَ مَا أُرْسِلَتْ بِهِ وَأَعُوذُ بِكَ مِنْ شَرِّهَا وَشَرِّ مَا فِيهَا وَشَرِّ مَا أُرْسِلَتْ بِهِ</div>
+                            <p class="mt-3 fst-italic">"Ya Allah, aku memohon kepada-Mu kebaikan angin ini, kebaikan yang ada di dalamnya, dan kebaikan yang Engkau kirimkan bersamanya. Aku berlindung kepada-Mu dari kejahatan angin ini..."</p>
+                            <hr>
+                            <p><strong>(HR. Muslim No. 2089)</strong> | <small>Adab: Rasulullah SAW mengajarkan doa ini saat melihat atau merasakan angin kencang sebagai pertanda akan datangnya badai atau musibah.</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artikel Tambahan: Integrasi Sains -->
+                <div class="col-12 mt-3">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5><i class="fas fa-microchip"></i> Teknologi IoT & Mitigasi Bencana dalam Perspektif Islam</h5>
+                            <p>Islam mengajarkan untuk mengambil sebab (ikhtiar) sekaligus tawakal. Di era Santri High-Tech, pemanfaatan sensor gempa, Early Warning System (EWS), dan aplikasi pemantauan cuaca adalah bentuk ikhtiar modern untuk menyelamatkan jiwa (Hifdzun Nafs), yang merupakan salah satu tujuan utama Syariah (Maqasid Syariah). Dengan data real-time, kita bisa sigap berdoa dan bertindak.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section PANDUAN & DOA -->
+        <section id="panduan" class="mt-5 pt-4">
+            <h2 class="section-title"><i class="fas fa-hand-sparkles me-2"></i> Panduan & Adab Saat Bencana</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="list-group shadow-sm">
+                        <div class="list-group-item"><i class="fas fa-dharmachakra text-primary me-3"></i> 1. Tetap tenang, jangan panik, bertawakal kepada Allah.</div>
+                        <div class="list-group-item"><i class="fas fa-praying-hands text-primary me-3"></i> 2. Perbanyak istighfar dan doa (doa angin kencang / doa gempa).</div>
+                        <div class="list-group-item"><i class="fas fa-people-arrows text-primary me-3"></i> 3. Evakuasi ke tempat yang lebih tinggi (banjir/tsunami) atau keluar bangunan (gempa).</div>
+                        <div class="list-group-item"><i class="fas fa-hands-helping text-primary me-3"></i> 4. Bantu sesama dan jangan menyebarkan hoax.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section TENTANG -->
+        <section id="tentang" class="mt-5 pt-4 mb-5">
+            <h2 class="section-title"><i class="fas fa-users me-2"></i> Tentang Aplikasi</h2>
+            <div class="card bg-light border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <p>Aplikasi <strong>SantriSiaga</strong> dikembangkan sebagai tugas UAS Mata Kuliah Islam & Saintek Semester 6.</p>
+                    <p><i class="fas fa-code"></i> Mengintegrasikan API BMKG & OpenWeatherMap dengan nilai-nilai Al-Qur'an dan Hadits.</p>
+                    <p class="mb-0"><strong>Tim Pengembang:</strong> [Nama Anda] & Kelompok [XX] | <i class="fas fa-calendar-alt"></i> 12 Juni 2026</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Popup Otomatis untuk DOA (Ini fitur unik trigger saat angin kencang) -->
+    <div class="modal fade" id="doaModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="fas fa-cloud-rain me-2"></i> Peringatan Dini & Doa</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="arabic-text fs-3" id="modalDoaArab">اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا...</div>
+                    <p class="mt-3 fw-bold" id="modalDoaLatin">Allahumma inni as'aluka khairaha... </p>
+                    <p id="modalDoaArti">"Ya Allah, aku mohon kebaikan angin ini..."</p>
+                    <hr>
+                    <p class="text-muted"><small>⚠️ Kondisi cuaca ekstrem terdeteksi. Bacalah doa di atas sebagai bentuk perlindungan diri kepada Allah SWT.</small></p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> <i class="fas fa-check-circle"></i> Saya sudah berdoa & siap siaga</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2026 SantriSiaga - Implementasi Techno-Pedagogy Berbasis API & Al-Qur'an</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
