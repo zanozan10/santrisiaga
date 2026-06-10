@@ -127,7 +127,6 @@ async function fetchEarthquake() {
             <hr><div class="text-start"><small><strong>Contoh data gempa:</strong></small><br>
             <small>📅 26 Mei 2026 | M 4.2 | Garut, Jawa Barat</small><br>
             <small>📅 15 Mei 2026 | M 5.1 | Jailolo, Maluku Utara</small></div>
-            <small class="text-muted mt-3 d-block">*Struktur kode sudah sesuai standar.</small>
         `;
   }
 }
