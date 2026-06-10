@@ -89,3 +89,7 @@ body {
   margin-bottom: 5px;
   border-radius: 10px !important;
 }
+
+.card-header.bg-primary {
+  background: linear-gradient(135deg, #2c7a4d, #1e5631) !important;
+}
